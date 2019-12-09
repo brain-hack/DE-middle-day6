@@ -1,0 +1,11 @@
+FROM demiddleday3_jupyter:latest
+
+MAINTAINER yoon, koock <deep-learning@kakao.com>
+
+COPY ./ /cassandra-client
+
+WORKDIR /cassandra-client
+
+EXPOSE 8888
+
+ENTRYPOINT jupyter notebook --allow-root --ip=0.0.0.0 --port=8888 --no-browser

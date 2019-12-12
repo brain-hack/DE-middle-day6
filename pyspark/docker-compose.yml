@@ -9,6 +9,7 @@ services:
     network_mode: "host"
     ports:
       - 8888:8888
+      - 9999:9999
     volumes:
       - ./jupyter:/jupyter
 

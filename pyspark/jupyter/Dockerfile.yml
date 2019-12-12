@@ -1,4 +1,4 @@
-FROM jupyter/pyspark-notebook:latest
+FROM geoffyoon/basejupyter:latest
 
 MAINTAINER yoon, koock <deep-learning@kakao.com>
 
@@ -7,6 +7,7 @@ COPY ./ /jupyter
 WORKDIR /jupyter
 
 EXPOSE 8888
+EXPOSE 9999
 
 RUN jupyter notebook --generate-config -y --allow-root
 
